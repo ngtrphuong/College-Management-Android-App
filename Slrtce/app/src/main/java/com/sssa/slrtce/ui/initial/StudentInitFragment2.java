@@ -100,7 +100,7 @@ public class StudentInitFragment2 extends BaseFragment {
 
     private void fragmentLoaders(){
         if (!TextUtils.isEmpty(prefernces.getYr()) && !TextUtils.isEmpty(prefernces.getinitStudent())){
-            if (prefernces.getYr().equals("Fourth Year") && prefernces.getinitStudent().equals("CMPN")){
+            if ("Fourth Year".equals(prefernces.getYr()) && "CMPN".equals(prefernces.getinitStudent())){
                 prefernces.setfourthYear(true);
                 getFragmentManager().beginTransaction().replace(setContainerId(), StudentFragment.getInstance()).commit();
             }

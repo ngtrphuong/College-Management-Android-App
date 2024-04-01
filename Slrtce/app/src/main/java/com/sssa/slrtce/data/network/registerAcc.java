@@ -53,7 +53,7 @@ public class registerAcc {
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
         if (!TextUtils.isEmpty(prefrences.isStudent())) {
-            if (prefrences.isStudent().equals("2") && prefrences.studentTrack()){
+            if ("2".equals(prefrences.isStudent()) && prefrences.studentTrack()){
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -105,7 +105,7 @@ public class registerAcc {
             Log.d("Student Register", "Empty");
         }
         if (!TextUtils.isEmpty(prefrences.isTeacher())){
-            if (prefrences.isTeacher().equals("5") && prefrences.teacherTrack()){
+            if ("5".equals(prefrences.isTeacher()) && prefrences.teacherTrack()){
                new Handler().postDelayed(new Runnable() {
                    @Override
                    public void run() {
@@ -158,7 +158,7 @@ public class registerAcc {
             Log.d("Teacher Register", "Empty");
         }
         if (!TextUtils.isEmpty(prefrences.isNTeacher())){
-            if (prefrences.isNTeacher().equals("8") && prefrences.nteacherTrack()){
+            if ("8".equals(prefrences.isNTeacher()) && prefrences.nteacherTrack()){
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {

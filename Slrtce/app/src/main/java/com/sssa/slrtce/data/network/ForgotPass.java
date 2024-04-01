@@ -57,7 +57,7 @@ public class ForgotPass {
         progressDialog.show();
 
         if (!TextUtils.isEmpty(prefernces.isStudent())){
-            if (prefernces.isStudent().equals("9") && prefernces.studentTrack()) {
+            if ("9".equals(prefernces.isStudent()) && prefernces.studentTrack()) {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -109,7 +109,7 @@ public class ForgotPass {
             Log.d("ForgotPass", "failed_Student");
         }
         if (!TextUtils.isEmpty(prefernces.isTeacher())){
-            if (prefernces.isTeacher().equals("10") && prefernces.teacherTrack()) {
+            if ("10".equals(prefernces.isTeacher()) && prefernces.teacherTrack()) {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -159,7 +159,7 @@ public class ForgotPass {
             Log.d("ForgotPass", "failed_Teacher");
         }
         if (!TextUtils.isEmpty(prefernces.isNTeacher())){
-            if (prefernces.isNTeacher().equals("11") && prefernces.nteacherTrack()) {
+            if ("11".equals(prefernces.isNTeacher()) && prefernces.nteacherTrack()) {
                new Handler().postDelayed(new Runnable() {
                    @Override
                    public void run() {

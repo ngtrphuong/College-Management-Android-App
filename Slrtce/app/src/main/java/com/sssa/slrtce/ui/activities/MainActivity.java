@@ -48,21 +48,21 @@ public class MainActivity extends BaseActivity {
     @Override
     protected Fragment setfragment() {
         if (!TextUtils.isEmpty(prefernces.isStudent())){
-            if (prefernces.isLogged() && prefernces.isStudent().equals("1") && prefernces.studentTrack()){
+            if (prefernces.isLogged() && "1".equals(prefernces.isStudent()) && prefernces.studentTrack()){
                 return StudentFragment.getInstance();
             }
         }else {
             Log.d("MainActivity", "failed to check login status");
         }
         if (!TextUtils.isEmpty(prefernces.isTeacher())){
-            if (prefernces.isLogged() && prefernces.isTeacher().equals("4") && prefernces.teacherTrack()){
+            if (prefernces.isLogged() && "4".equals(prefernces.isTeacher()) && prefernces.teacherTrack()){
                 return TeacherFragment.getInstance();
             }
         }else {
             Log.d("MainActivity", "failed to check login status");
         }
         if (!TextUtils.isEmpty(prefernces.isNTeacher())){
-            if (prefernces.isLogged() && prefernces.isNTeacher().equals("7") && prefernces.nteacherTrack()){
+            if (prefernces.isLogged() && "7".equals(prefernces.isNTeacher()) && prefernces.nteacherTrack()){
                 return NonTeachFragment.getInstance();
             }
         }else {

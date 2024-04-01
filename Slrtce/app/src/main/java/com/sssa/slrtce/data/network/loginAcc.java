@@ -63,7 +63,7 @@ public class loginAcc {
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
         if (!TextUtils.isEmpty(prefernces.isStudent())) {
-            if ((prefernces.isStudent().equals("0") || prefernces.isStudent().equals("2")) && prefernces.studentTrack()) {
+            if (("0".equals(prefernces.isStudent()) || "2".equals(prefernces.isStudent())) && prefernces.studentTrack()) {
                 new Handler().postDelayed(new Runnable() {
 
                     @Override
@@ -126,7 +126,7 @@ public class loginAcc {
             Log.d("Student", "empty Student");
         }
         if (!TextUtils.isEmpty(prefernces.isTeacher())) {
-            if ((prefernces.isTeacher().equals("3") || prefernces.isTeacher().equals("5")) && prefernces.teacherTrack()) {
+            if (("3".equals(prefernces.isTeacher()) || "5".equals(prefernces.isTeacher())) && prefernces.teacherTrack()) {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -180,7 +180,7 @@ public class loginAcc {
             Log.d("Teacher", "empty teacher");
         }
         if (!TextUtils.isEmpty(prefernces.isNTeacher())) {
-            if ((prefernces.isNTeacher().equals("6") || prefernces.isNTeacher().equals("8")) && prefernces.nteacherTrack()) {
+            if (("6".equals(prefernces.isNTeacher()) || "8".equals(prefernces.isNTeacher())) && prefernces.nteacherTrack()) {
                new Handler().postDelayed(new Runnable() {
                    @Override
                    public void run() {

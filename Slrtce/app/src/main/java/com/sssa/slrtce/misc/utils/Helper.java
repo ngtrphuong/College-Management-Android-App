@@ -32,6 +32,7 @@ import com.sssa.slrtce.R;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -220,11 +221,7 @@ public class Helper {
             if (!folder.exists()){
                 folder.mkdirs();
             }
-            image = File.createTempFile(
-                    imageFileName,  // prefix
-                    ".jpg",         // suffix
-                    folder      // directory
-            );
+            image = Files.createTempFile(folder.toPath(), imageFileName, ".jpg").toFile();
             setImagePath(image.getAbsolutePath());
         } catch (IOException e) {
             e.printStackTrace();
